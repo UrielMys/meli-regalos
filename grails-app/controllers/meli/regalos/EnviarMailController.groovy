@@ -14,5 +14,4 @@ class EnviarMailController {
 		testService.sendConfirmation()
 		render "OK"
 	}
-	
 }

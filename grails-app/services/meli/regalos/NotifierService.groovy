@@ -13,5 +13,4 @@ class NotifierService {
         }
         thread.join()
     }
-	
 }
