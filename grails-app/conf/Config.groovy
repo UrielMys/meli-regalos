@@ -43,7 +43,16 @@ grails.controllers.defaultScope = 'singleton'
 
 // GSP settings
 grails {
-    views {
+	//agregue esta linea para configurar el mail
+	mail {
+     host = "smtp.live.com"
+     port = 587
+     username = "urieljorgemysler@hotmail.com"
+     password = "12345abc"
+     props = ["mail.smtp.starttls.enable":"true",
+              "mail.smtp.port":"587"]
+   }
+	views {
         gsp {
             encoding = 'UTF-8'
             htmlcodec = 'xml' // use xml escaping instead of HTML4 escaping
@@ -94,6 +103,12 @@ environments {
         // TODO: grails.serverURL = "http://www.changeme.com"
     }
 }
+
+// Mail configuration
+def smtpPort = com.icegreen.greenmail.util.ServerSetupTest.SMTP.port
+grails.mail.port = smtpPort
+greenmail.ports.smtp = smtpPort
+grails.mail.default.from = "me@me.com"
 
 // log4j configuration
 log4j.main = {
