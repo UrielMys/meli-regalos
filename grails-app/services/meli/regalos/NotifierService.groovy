@@ -1,14 +1,17 @@
 package meli.regalos
 
 class NotifierService {
-	boolean transactional = false;
-    def mailService;
-	def contactUser(userName,email) {
-		mailService.sendMail {
-			to email
-			from "jorgeurielmysler@hotmail.com"
-			subject "Probando mails"
-			body "Estamos probando enviar mails"
-		}
+	//boolean transactional = false;
+	
+    def sendConfirmation() {
+        def thread = Thread.start {
+            sendMail {
+                to "jorgejcabrera@hotmail.com"
+                subject "Confirmation"
+                body view: "/mail/confirmation"
+            }
+        }
+        thread.join()
     }
+	
 }

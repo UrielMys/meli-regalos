@@ -43,7 +43,8 @@ grails.controllers.defaultScope = 'singleton'
 
 // GSP settings
 grails {
-   mail {
+	//agregue esta linea para configurar el mail
+	mail {
      host = "smtp.live.com"
      port = 587
      username = "urieljorgemysler@hotmail.com"
@@ -76,8 +77,6 @@ grails.scaffolding.templates.domainSuffix = 'Instance'
 grails.json.legacy.builder = false
 // enabled native2ascii conversion of i18n properties files
 grails.enable.native2ascii = true
-
-//grails.mail.host = "192.168.2.8"
 // packages to include in Spring bean scanning
 grails.spring.bean.packages = []
 // whether to disable processing of multi part requests
@@ -104,6 +103,12 @@ environments {
         // TODO: grails.serverURL = "http://www.changeme.com"
     }
 }
+
+// Mail configuration
+def smtpPort = com.icegreen.greenmail.util.ServerSetupTest.SMTP.port
+grails.mail.port = smtpPort
+greenmail.ports.smtp = smtpPort
+grails.mail.default.from = "me@me.com"
 
 // log4j configuration
 log4j.main = {
