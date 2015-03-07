@@ -43,7 +43,15 @@ grails.controllers.defaultScope = 'singleton'
 
 // GSP settings
 grails {
-    views {
+   mail {
+     host = "smtp.live.com"
+     port = 587
+     username = "urieljorgemysler@hotmail.com"
+     password = "12345abc"
+     props = ["mail.smtp.starttls.enable":"true",
+              "mail.smtp.port":"587"]
+   }
+	views {
         gsp {
             encoding = 'UTF-8'
             htmlcodec = 'xml' // use xml escaping instead of HTML4 escaping
@@ -68,6 +76,8 @@ grails.scaffolding.templates.domainSuffix = 'Instance'
 grails.json.legacy.builder = false
 // enabled native2ascii conversion of i18n properties files
 grails.enable.native2ascii = true
+
+//grails.mail.host = "192.168.2.8"
 // packages to include in Spring bean scanning
 grails.spring.bean.packages = []
 // whether to disable processing of multi part requests
