@@ -28,7 +28,12 @@
 	<div id="logo" role="banner">
 		<a href="#"><asset:image src="icrco-logo.gif" alt="ICR" /></a>
 	</div>
-	<g:layoutBody />
-	<div class="footer" role="contentinfo"></div>																																																																																																																							
+	<div id="page-body" role="main">
+		
+			<g:layoutBody />
+		
+
+	</div>
+	<div class="footer" role="contentinfo"></div>
 </body>
 </html>

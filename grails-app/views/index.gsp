@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="layout" content="formatoAplicacion" />
+<meta name="layout" content="aplicacionDesplegable" />
 <title>Welcome to Grails</title>
 <style type="text/css" media="screen">
 #status {
@@ -80,37 +80,7 @@ p {
 </style>
 </head>
 <body>
-	<a href="#page-body" class="skip"><g:message
-			code="default.link.skip.label" default="Skip to content&hellip;" /></a>
-	<div id="status" role="complementary">
-		<h1>Empleado</h1>
-		<ul>
-			<li><a
-				href="${createLink(controller:'Empleado',action:'index')}"> Ver
-					empleados</a></li>
-			<li><a
-				href="${createLink(controller:'Empleado',action:'create')}">Crear
-					empleado</a></li>
-
-		</ul>
-		<h1>Regalos</h1>
-		<ul>
-			<li><a
-				href="${createLink(controller:'Cumpleanios',action:'verCumpleanios')}">
-					Ver regalos de hoy</a></li>
-			<li><a href="${createLink(controller:'Regalo',action:'index')}">
-					Ver todos los regalos</a></li>
-
-		</ul>
-		<h1>Reportes</h1>
-		<ul>
-			<li><a
-				href="${createLink(controller:'EnviarMail',action:'enviarMail')}">
-					Enviar correo con los regalos del mes</a></li>
-			<li>
-		</ul>
-	</div>
-	<div id="page-body" role="main">
+	
 		<h1>Welcome to Grails</h1>
 		<p>Congratulations, you have successfully started your first
 			Grails application! At the moment this is the default page, feel free
@@ -131,6 +101,5 @@ p {
 				</g:each>
 			</ul>
 		</div>
-	</div>
 </body>
 </html>
